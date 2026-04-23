@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/ipavlic/Documents/epex -type f -name \"*.cls\" -o -name \"*.object-meta.xml\" -o -name \"*.field-meta.xml\" -o -name \"go.mod\" -o -name \"go.sum\" -o -name \"Makefile\" -o -name \"*.g4\" -o -name \"sfdx-project.json\" -o -name \"package.json\" 2>/dev/null | head -50)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(gh api:*)",
+      "Bash(gh search:*)",
+      "WebFetch(domain:developer.salesforce.com)",
+      "Bash(go version:*)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(curl -sL -o grammar/ApexLexer.g4 https://raw.githubusercontent.com/octoberswimmer/apexfmt/master/grammar/ApexLexer.g4 && curl -sL -o grammar/ApexParser.g4 https://raw.githubusercontent.com/octoberswimmer/apexfmt/master/grammar/ApexParser.g4 && curl -sL -o grammar/antlr-4.13.1-complete.jar https://raw.githubusercontent.com/octoberswimmer/apexfmt/master/grammar/antlr-4.13.1-complete.jar && echo \"Downloads done\" && wc -l grammar/ApexLexer.g4 grammar/ApexParser.g4 && ls -lh grammar/antlr-4.13.1-complete.jar)",
+      "Bash(go mod:*)",
+      "Bash(chmod +x grammar/generate.sh && cd grammar && go generate ./...)",
+      "Bash(cd /Users/ipavlic/Documents/epex && go get github.com/antlr4-go/antlr/v4@v4.13.0)",
+      "Bash(go build:*)",
+      "Bash(go test:*)",
+      "Bash(go run:*)",
+      "WebSearch",
+      "WebFetch(domain:blog.beyondthecloud.dev)",
+      "WebFetch(domain:help.salesforce.com)",
+      "Bash(grep -n \"func queryResultsToList\" /Users/ipavlic/Documents/epex/interpreter/*.go)",
+      "Bash(grep -B 2 -A 10 \"^fieldName$\" /Users/ipavlic/Documents/epex/grammar/ApexParser.g4)"
+    ]
+  }
+}
